@@ -1,3 +1,24 @@
+/* for copy
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+
+	int variable;
+
+	cout << "Hello, World!" << endl;
+	cin >> variable;
+
+	system("pause");
+	return 0;
+}
+
+*/
+
 #include <iostream> // подключение cin(ввод), cout(вывод)
 #include <string> // чтобы использовать тип данных string(строчный)
 using namespace std; // использовать группу имен std. Вместо std::cin, можно писать cin
