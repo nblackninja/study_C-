@@ -5,9 +5,8 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 
+
 	unsigned short width, height, spaceWidth;
-	char star = '*';
-	char spaceWidthChar = ' ';
 
 	cout << "Ширина прямоугольника: ";
 	cin >> width;
@@ -17,35 +16,35 @@ int main()
 	cout << "Высота прямоугольника: ";
 	cin >> height;
 
-	for (int i = 0; i < width;)
+	for (unsigned short i = 0; i < width; )
 	{
-		cout << star;
+		cout << '*';
 		i++;
 
 		if (i == width)
 		{
-			for (int k = 2; k < height; k++)
+			for (unsigned short k = 2; k < height; k++)
 			{
-				cout << endl << star;
+				cout << endl << '*';
 
-				for (int j = 0; j < spaceWidth; j++)
+				for (unsigned short j = 0; j < spaceWidth; j++)
 				{
-					cout << spaceWidthChar;
+					cout << ' ';
 				}
-				cout << star;
+				cout << '*';
 			}
 			i++;
-		 }
+		}
 		if (i > width)
 		{
 			cout << endl;
-			for (int kia = 0; kia < width;)
+			for (unsigned short kia = 0; kia < width;)
 			{
-				cout << star;
+				cout << '*';
 				kia++;
 			}
 		}
-	 }
+	}
 
 
 	system("pause");
