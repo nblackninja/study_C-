@@ -72,4 +72,29 @@ int main()
 
 строки массив может сам посчитать, а колонки нужно всегда указать
 
+
+Сортировка двумерного массива по столбцам:
+	bool sorted = false;
+	int temp, i ,j;
+	while (sorted == false)
+	{
+		sorted = true;
+		i = 0, j = 0;
+		for (int iNext = 0; iNext < STR; iNext++)
+		{
+			for (int jNext = 0; jNext < STB; jNext++)
+			{
+				if (Mas[i][j] > Mas[iNext][jNext]) // если поменять знак на обратный, то отсортирует по убыванию
+				{
+					temp = Mas[i][j];
+					Mas[i][j] = Mas[iNext][jNext];
+					Mas[iNext][jNext] = temp;
+					sorted = false;
+				}
+				i = iNext;
+				j = jNext;
+			}
+		}
+	}
+
 */

@@ -6,7 +6,6 @@ void Foo(int *pNum)
 	(*pNum)++;
 }
 
-
 int main()
 {
 	setlocale(LC_ALL, "Russian");

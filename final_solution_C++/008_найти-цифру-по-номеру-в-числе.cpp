@@ -33,7 +33,7 @@ int main()
 
 	int number, IndexNumeral, answer;
 
-	cout << "Введите число: ";
+	cout << "Введите целое число: ";
 	cin >> number;
 
 	cout << "Какую по счету цифру найти: ";

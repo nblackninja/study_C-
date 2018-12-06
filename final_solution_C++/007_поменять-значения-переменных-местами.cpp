@@ -10,13 +10,12 @@ void swapVarPointer(int *pNum1, int *pNum2) // через указатель
 }
 
 template <typename T>
-void swapVarRef(T &var1, T &var2) // через ссылку, шаблонная функция с любым типом данных
+void swapVarRef(T &var1, T &var2) // через ссылку, шаблонная функция с любым одинаковым типом данных
 {
 	T temp = var1;
 	var1 = var2;
 	var2 = temp;
 }
-
 
 int main()
 {

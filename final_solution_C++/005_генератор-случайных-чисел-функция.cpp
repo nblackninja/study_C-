@@ -51,4 +51,72 @@ srand(time(NULL)); - делает функцию rand() всегда разно�
 максимальное = число_1 + число_2
 минимальное = число_2
 
+===
+Шанс выпадения чисел
+===
+
+#include <iostream> 
+#include <string> 
+#include <ctime>
+#include <random>
+using namespace std;
+
+int randomNumberFunc(const int min, const int max) // #include <random>
+{
+	random_device rd;
+	mt19937 randomAllTime(rd());
+	uniform_int_distribution<int> randomNumPointsMinMax(min, max);
+	int randomNumPoints = randomNumPointsMinMax(randomAllTime);
+
+	return randomNumPoints;
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	srand(time(NULL));
+
+	double countTest;
+	cout << "Количество тестов: ";
+	cin >> countTest;
+
+	double arrRandNum50 = 0,
+		arrRandNum30 = 0,
+		arrRandNum20 = 0;
+
+	for (int i = 0; i < countTest; i++)
+	{
+		int randNum = randomNumberFunc(1, 100);
+
+		if (randNum <= 50)
+		{
+			arrRandNum50++;
+		}
+		else if (randNum > 50 && randNum <= 80)
+		{
+			arrRandNum30++;
+		}
+		else if (randNum > 80 && randNum <= 100)
+		{
+			arrRandNum20++;
+		}
+	}
+
+	cout << "Количество ОБЫЧНЫХ (50%): " << arrRandNum50 << endl;
+	cout << "Количество РЕДКИХ (30%): " << arrRandNum30 << endl;
+	cout << "Количество ЛЕГЕНДАРНЫХ (20%): " << arrRandNum20 << endl;
+
+	cout << endl;
+
+	cout << "Реальные данные:" << endl;
+	cout << "Количество ОБЫЧНЫХ: " << (arrRandNum50 / countTest) * 100 << "%" << endl;
+	cout << "Количество РЕДКИХ: " << (arrRandNum30 / countTest) * 100 << "%" << endl;
+	cout << "Количество ЛЕГЕНДАРНЫХ: " << (arrRandNum20 / countTest) * 100 << "%" << endl;
+
+
+	system("pause");
+	return 0;
+}
+
+
 */
