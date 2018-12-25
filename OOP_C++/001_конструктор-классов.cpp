@@ -67,7 +67,8 @@ this - констнтный указатель на адрес в памяти
 this -> nameVar
 
 
-
+Перегрузка оператора присваивания
+https://www.youtube.com/watch?v=UsezbK-3BL0&index=97&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r
 
 
 
